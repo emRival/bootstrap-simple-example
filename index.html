@@ -13,6 +13,18 @@
 
     <!-- local css -->
     <link rel="stylesheet" href="css/style.css">
+
+    <!-- link to font awesome -->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/solid.min.css"
+        integrity="sha512-6mc0R607di/biCutMUtU9K7NtNewiGQzrvWX4bWTeqmljZdJrwYvKJtnhgR+Ryvj+NRJ8+NnnCM/biGqMe/iRA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
 </head>
 
 <body>
@@ -126,22 +138,22 @@
     <div class="container">
 
         <div class="text-card">
-            <h1>Cards<span class="text-danger">.</span></h1>
+            <h1><span><i class="fa-solid fa-sliders text-danger fs-2"></i></span> Cards<span
+                    class="text-danger">.</span>
+            </h1>
             <div id="liveAlertPlaceholder"></div>
         </div>
-        <div class="row">
+        <div class="row mb-5">
             <!-- card - modal -->
-            <div class="col">
-                <div class="card ">
+            <div class="col mb-5">
+                <div class="card h-100 text-bg-dark position-relative">
                     <img src="./img/3.jpeg" class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 class="card-title">Card modal</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
-                            the
-                            card's
-                            content.</p>
+                        <p class="card-text">Some quick example text to build on the card title and make up the </p>
                         <button data-bs-toggle="modal" data-bs-target="#staticBackdrop" type="button"
-                            class="btn btn-primary">Open Modal</button>
+                            class="btn btn-danger position-absolute top-100 start-50 translate-middle">Open
+                            Modal</button>
                     </div>
                 </div>
             </div>
@@ -199,22 +211,119 @@
             <!-- end of card - modal -->
 
             <!-- card - alert -->
-            <div class="col">
-                <div class="card">
+            <div class="col mb-5">
+                <div class="card h-100 mb-3">
                     <img src="./img/3.jpeg" class="card-img-top" alt="...">
-                    <div class="card-body">
+                    <div class="card-body position-relative">
                         <h5 class="card-title">Card Alert</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the </p>
+                        <button href="#" class="btn btn-danger position-absolute top-100 start-50 translate-middle"
+                            id="liveAlertBtn">Open Alert</button>
+                    </div>
+                </div>
+            </div>
+            <!-- end card alert  -->
+
+
+            <div class="col mb-5">
+                <div class="card h-100 mb-3 text-bg-warning">
+                    <img src="./img/3.jpeg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Card Sidebar</h5>
                         <p class="card-text">Some quick example text to build on the card title and make up the bulk of
                             the
                             card's
                             content.</p>
-                        <button href="#" class="btn btn-primary" id="liveAlertBtn">Open Alert</button>
+                        <button class="btn btn-danger position-absolute top-100 start-50 translate-middle"
+                            data-bs-toggle="offcanvas" data-bs-target="#offcanvasTop" aria-controls="offcanvasTop">Open
+                            Sidebar</button>
+                    </div>
+                </div>
+
+                <div class="offcanvas offcanvas-top" tabindex="-1" id="offcanvasTop"
+                    aria-labelledby="offcanvasTopLabel">
+                    <div class="offcanvas-header">
+                        <h5 class="offcanvas-title" id="offcanvasTopLabel">This Is a sideBar </h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                        <h1 class="text-center">Hallo ini adalah sideBar ya gaise 👾</h1>
+
+                        <div class="dropdown mt-3 text-center">
+                            <button class=" btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown">
+                                Tombol Rahasia
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Action</a></li>
+                                <li><a class="dropdown-item" href="#">Another action</a></li>
+                                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
 
-            <div class="col">
-                <div class="card">
+            <div class="col mb-5">
+                <div class="card h-100 mb-3 text-bg-success">
+                    <img src="./img/3.jpeg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Card Form</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the
+                            card's
+                            content.</p>
+                        <button data-bs-toggle="modal" data-bs-target="#modalForm" type="button"
+                            class="btn btn-danger position-absolute top-100 start-50 translate-middle">Open
+                            Modal</button>
+                    </div>
+                </div>
+
+
+            </div>
+
+            <!-- ============= modal =============== -->
+            <div class="modal fade" id="modalForm" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+                aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content bg-dark text-white bg-gradient">
+                        <div class="modal-header">
+                            <h1 class="modal-title fs-5" id="staticBackdropLabel">Card Form</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+
+                            <h5> Hallo guys ini adalah modal 👋🏻</h5>
+                            <form>
+                                <div class="mb-3">
+                                    <label for="exampleInputEmail1" class="form-label">Email address</label>
+                                    <input type="email" class="form-control" id="exampleInputEmail1"
+                                        aria-describedby="emailHelp">
+                                    <div id="emailHelp" class="form-text">We'll never share your email with anyone else.
+                                    </div>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="exampleInputPassword1" class="form-label">Password</label>
+                                    <input type="password" class="form-control" id="exampleInputPassword1">
+                                </div>
+                                <div class="mb-3 form-check">
+                                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                                    <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary"
+                                        data-bs-dismiss="modal">Close</button>
+                                    <button type="submit" class="btn btn-primary">Simpan</button>
+                                </div>
+                            </form>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <!-- ============= end of modal =============== -->
+
+            <div class="col mb-5">
+                <div class="card h-100 mb-3 text-bg-primary">
                     <img src="./img/3.jpeg" class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 class="card-title">Card title</h5>
@@ -222,35 +331,8 @@
                             the
                             card's
                             content.</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col">
-                <div class="card">
-                    <img src="./img/3.jpeg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
-                            the
-                            card's
-                            content.</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col">
-                <div class="card">
-                    <img src="./img/3.jpeg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
-                            the
-                            card's
-                            content.</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                        <a href="#" class="btn btn-danger position-absolute top-100 start-50 translate-middle">Go
+                            somewhere</a>
                     </div>
                 </div>
             </div>
@@ -258,7 +340,35 @@
     </div>
 
 
-    <!-- end of main content -->
+
+
+
+    <footer
+        class="d-flex flex-wrap justify-content-between align-items-center py-3 px-4 border-top bg-dark bg-gradient">
+
+
+        <div class="col-md-4 d-flex align-items-center">
+            <a href="/" class="mb-3 me-2 mb-md-0 text-muted text-decoration-none lh-1">
+
+                <i class="fa-sharp fa-solid fa-ghost fs-4 text-danger"></i>
+
+            </a>
+            <span class="mb-3 mb-md-0 text-white">&copy; 2022 Company, Inc</span>
+        </div>
+
+        <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
+            <li class="ms-3"><a class="text-muted" href="#">
+                    <i class="fa-brands fa-facebook fs-4 text-danger"></i>
+                </a></li>
+            <li class="ms-3"><a class="text-muted" href="#">
+                    <i class="fa-brands fa-github fs-4 text-danger"></i>
+                </a></li>
+            <li class="ms-3"><a class="text-muted" href="#">
+                    <i class="fa-brands fa-apple fs-4 text-danger"></i>
+                </a></li>
+        </ul>
+    </footer>
+
 
 
 
@@ -297,11 +407,8 @@
 
             });
         }
-
-
-
-
     </script>
+    <!-- end alert script -->
 </body>
 
 </html>
