@@ -1,0 +1,51 @@
+html {
+  margin: 0;
+  padding: 0;
+  font-family: "Open Sans", sans-serif;
+}
+
+.navbar-brand,
+.nav-link {
+  color: white !important;
+}
+
+.nav-link::after {
+  content: "";
+  width: 0;
+  display: block;
+  height: 3px;
+  border-radius: 15px;
+  background: #f31d1d;
+  transition: width 0.3s;
+}
+.nav-link:hover::after {
+  width: 100%;
+  transition: width 0.3s;
+}
+
+.active::after {
+  width: 100%;
+}
+
+/* Path: css/style.css */
+.carousel-item img {
+  height: 300px;
+  object-fit: cover;
+}
+
+.card {
+  margin-top: 30px;
+}
+
+.text-card {
+  margin-top: 20px;
+}
+
+.text-card::after {
+  content: "";
+  width: 20%;
+  display: block;
+  height: 3px;
+  border-radius: 15px;
+  background: #f31d1d;
+}
